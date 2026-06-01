@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Complete Witchcraft Library — +1,250 Books of Magic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+:root {
+  --bg:        #080612;
+  --surface:   #0F0B20;
+  --card:      #160F2E;
+  --border:    rgba(139,92,246,0.2);
+  --purple:    #7C3AED;
+  --purple-light: #A78BFA;
+  --purple-glow: rgba(124,58,237,0.15);
+  --gold:      #F59E0B;
+  --gold-light: #FCD34D;
+  --gold-glow: rgba(245,158,11,0.12);
+  --text:      #EDE9FE;
+  --text-sub:  #A89BC2;
+  --text-muted:#5B4E72;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── PATTERN BG ── */
+.pattern-bg {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 75% 20%, rgba(180,100,30,0.18) 0%, transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(80,30,140,0.15) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B5CF6' fill-opacity='0.07'%3E%3Cpath d='M20 18v4M18 20h4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── TYPOGRAPHY ── */
+.cinzel { font-family: 'Cinzel', serif; }
+
+h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
+
+/* ── LAYOUT ── */
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section-sm { padding: 56px 0; }
+
+/* ── EYEBROW ── */
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  width: 80px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 28px; opacity: 1;
+}
+
+/* ── GOLD TEXT ── */
+.gold { color: var(--gold); }
+.purple-text { color: var(--purple-light); }
+
+/* ── SECTION HEADLINE ── */
+.section-headline {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+.section-sub {
+  font-size: 15px;
+  color: var(--text-sub);
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+}
+
+/* ── GOLD BUTTON ── */
+.btn-gold {
+  display: inline-block;
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: #0D0A1A;
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: .04em;
+  transition: transform .15s, box-shadow .15s;
+  box-shadow: 0 0 24px rgba(245,158,11,0.3);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 36px rgba(245,158,11,0.45);
+}
+.btn-gold-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 15px 36px;
+  border-radius: 12px;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: .04em;
+  transition: background .15s, box-shadow .15s;
+}
+.btn-gold-outline:hover {
+  background: var(--gold-glow);
+  box-shadow: 0 0 24px rgba(245,158,11,0.2);
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0 60px;
+  position: relative;
+}
+#hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  width: 100%;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(245,158,11,0.08);
+  border: 0.5px solid rgba(245,158,11,0.3);
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 28px;
+  font-weight: 600;
+  animation: fadeDown .6s ease both;
+}
+.hero-h1 {
+  font-size: clamp(32px, 6vw, 58px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  animation: fadeDown .6s .1s ease both;
+}
+.hero-h1 .gold { color: var(--gold); }
+.hero-sub {
+  font-size: clamp(14px, 1.8vw, 17px);
+  color: var(--text-sub);
+  max-width: 560px;
+  margin: 0 auto 40px;
+  line-height: 1.75;
+  animation: fadeDown .6s .2s ease both;
+}
+.hero-mockup {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(139,92,246,0.25);
+  box-shadow: 0 0 60px rgba(124,58,237,0.2), 0 0 120px rgba(245,158,11,0.06);
+  animation: fadeUp .7s .3s ease both;
+  display: block;
+}
+.hero-price-block {
+  margin-bottom: 28px;
+  animation: fadeUp .6s .4s ease both;
+}
+.hero-price-old {
+  font-size: 15px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+.hero-price-new {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.hero-cta-wrap {
+  animation: fadeUp .6s .5s ease both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.hero-trust {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: .04em;
+}
+.hero-trust span { color: var(--text-sub); }
+
+/* ══════════════════════════════
+   WHATS INSIDE
+══════════════════════════════ */
+#inside { background: var(--surface); }
+
+.inside-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.inside-card {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  transition: border-color .2s, transform .2s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inside-card:hover {
+  border-color: rgba(245,158,11,0.35);
+  transform: translateY(-3px);
+}
+.inside-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(124,58,237,0.12);
+  border: 0.5px solid rgba(139,92,246,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.inside-name {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+.inside-desc {
+  font-size: 11px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+.inside-strip {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 24px;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.strip-item { text-align: center; }
+.strip-num {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 4px;
+}
+.strip-lbl { font-size: 11px; color: var(--text-muted); letter-spacing: .04em; }
+.inside-closing {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-sub);
+  font-style: italic;
+}
+
+/* ══════════════════════════════
+   FOR YOU
+══════════════════════════════ */
+#foryou { background: var(--bg); }
+
+.foryou-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.foryou-card {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.foryou-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 20px 20px 0 0;
+}
+.foryou-card-1::before { background: linear-gradient(90deg, var(--purple), var(--purple-light)); }
+.foryou-card-2::before { background: linear-gradient(90deg, #D97706, var(--gold-light)); }
+.foryou-card-3::before { background: linear-gradient(90deg, #059669, #6EE7B7); }
+.foryou-card-1:hover { border-color: rgba(167,139,250,0.4); box-shadow: 0 0 32px rgba(124,58,237,0.12); transform: translateY(-3px); }
+.foryou-card-2:hover { border-color: rgba(245,158,11,0.4); box-shadow: 0 0 32px rgba(245,158,11,0.12); transform: translateY(-3px); }
+.foryou-card-3:hover { border-color: rgba(110,231,183,0.4); box-shadow: 0 0 32px rgba(110,231,183,0.10); transform: translateY(-3px); }
+
+.foryou-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-family: 'Cinzel', serif;
+  color: inherit;
+}
+.foryou-icon-1 .foryou-sym { color: var(--purple-light); }
+.foryou-icon-2 .foryou-sym { color: var(--gold); }
+.foryou-icon-3 .foryou-sym { color: #6EE7B7; }
+.foryou-icon-1 { background: rgba(124,58,237,0.15); border: 0.5px solid rgba(167,139,250,0.25); }
+.foryou-icon-2 { background: rgba(245,158,11,0.12); border: 0.5px solid rgba(245,158,11,0.25); }
+.foryou-icon-3 { background: rgba(110,231,183,0.10); border: 0.5px solid rgba(110,231,183,0.2); }
+
+.foryou-label {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+.label-1 { color: var(--purple-light); }
+.label-2 { color: var(--gold); }
+.label-3 { color: #6EE7B7; }
+
+.foryou-sep {
+  height: 0.5px;
+  margin-bottom: 16px;
+  border: none;
+}
+.sep-1 { background: linear-gradient(90deg, rgba(167,139,250,0.3), transparent); }
+.sep-2 { background: linear-gradient(90deg, rgba(245,158,11,0.3), transparent); }
+.sep-3 { background: linear-gradient(90deg, rgba(110,231,183,0.25), transparent); }
+
+.foryou-bullet {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+.foryou-bullet:last-child { margin-bottom: 0; }
+.bullet-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.dot-1 { background: var(--purple-light); }
+.dot-2 { background: var(--gold); }
+.dot-3 { background: #6EE7B7; }
+
+.universal-box {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 24px;
+}
+.universal-title {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.check-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.55;
+}
+.check-row:last-child { margin-bottom: 0; }
+.check-icon { color: var(--gold); flex-shrink: 0; font-size: 14px; }
+.foryou-closing {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: var(--text-sub);
+  font-style: italic;
+}
+
+/* ══════════════════════════════
+   REVIEWS
+══════════════════════════════ */
+#reviews { background: var(--surface); }
+
+.stars-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.stars-big { font-size: 22px; color: var(--gold); letter-spacing: 3px; }
+.stars-num { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--text); }
+.stars-lbl { font-size: 13px; color: var(--text-muted); }
+
+.reviews-outer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0 16px;
+}
+.reviews-outer::before,
+.reviews-outer::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.reviews-outer::before { left: 0; background: linear-gradient(90deg, var(--surface), transparent); }
+.reviews-outer::after  { right: 0; background: linear-gradient(270deg, var(--surface), transparent); }
+
+.reviews-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollReviews 40s linear infinite;
+  margin-bottom: 0;
+}
+.reviews-track:hover { animation-play-state: paused; }
+
+@keyframes scrollReviews {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-256px * 10 - 16px * 10)); }
+}
+
+.review-card {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  min-width: 240px;
+  max-width: 240px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.review-stars { color: var(--gold); font-size: 13px; letter-spacing: 1px; }
+.review-text {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.65;
+  flex: 1;
+}
+.review-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 0.5px solid var(--border);
+}
+.review-avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--purple-glow);
+  border: 0.5px solid rgba(139,92,246,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple-light);
+  flex-shrink: 0;
+}
+.review-name { font-size: 13px; font-weight: 500; color: var(--text); }
+.review-verified { font-size: 10px; color: var(--text-muted); margin-top: 1px; }
+
+.scroll-hint { font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 6px; }
+
+.reviews-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding: 16px;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+}
+.reviews-bottom-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.reviews-bottom-item .gold { font-size: 14px; }
+
+/* ══════════════════════════════
+   BONUS
+══════════════════════════════ */
+#bonus { background: var(--bg); }
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.bonus-card {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: border-color .2s;
+}
+.bonus-card:hover { border-color: rgba(245,158,11,0.3); }
+.bonus-num {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--purple-glow);
+  border: 0.5px solid rgba(139,92,246,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple-light);
+  flex-shrink: 0;
+}
+.bonus-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+  display: block;
+}
+.bonus-name {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.bonus-desc { font-size: 12px; color: var(--text-sub); line-height: 1.6; }
+.bonus-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.val-strike { text-decoration: line-through; }
+.val-free {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6EE7B7;
+  background: rgba(110,231,183,0.08);
+  border: 0.5px solid rgba(110,231,183,0.2);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.bonus-total {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.bonus-total-left { font-size: 13px; color: var(--text-sub); line-height: 1.6; }
+.bonus-total-left strong {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  display: block;
+  margin-bottom: 2px;
+}
+.bonus-total-right { text-align: right; }
+.bonus-total-strike {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: line-through;
+  color: var(--text-muted);
+  display: block;
+}
+.bonus-total-free {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6EE7B7;
+}
+
+/* ══════════════════════════════
+   OFFER (BLOCO 6)
+══════════════════════════════ */
+#offer { background: var(--surface); }
+
+.offer-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.offer-item {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.offer-item.main { border-color: rgba(245,158,11,0.4); }
+.offer-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  background: var(--purple-glow);
+}
+.offer-info { flex: 1; }
+.offer-name {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.offer-desc { font-size: 11px; color: var(--text-sub); margin-top: 2px; }
+.offer-val { text-align: right; flex-shrink: 0; }
+.offer-val-strike { font-size: 12px; text-decoration: line-through; color: var(--text-muted); display: block; }
+.offer-val-free {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6EE7B7;
+  background: rgba(110,231,183,0.08);
+  border: 0.5px solid rgba(110,231,183,0.2);
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-top: 3px;
+}
+.offer-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 20px;
+  margin-bottom: 32px;
+}
+.offer-total-label { font-size: 14px; color: var(--text-sub); }
+.offer-total-nums { display: flex; align-items: center; gap: 14px; }
+.offer-total-strike { font-size: 16px; text-decoration: line-through; color: var(--text-muted); }
+.offer-total-price {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.offer-price-center { text-align: center; margin-bottom: 8px; }
+.offer-price-big {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(48px, 8vw, 72px);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(245,158,11,0.3);
+}
+.offer-price-note { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+.offer-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.decision-block {
+  background: var(--card);
+  border: 0.5px solid rgba(245,158,11,0.2);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.decision-title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+.decision-text { font-size: 14px; color: var(--text-sub); line-height: 1.75; }
+.decision-text strong { color: var(--gold); font-weight: 600; }
+
+.trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.trust-icon { font-size: 14px; color: var(--purple-light); }
+
+.guarantee {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.guarantee-icon { font-size: 32px; flex-shrink: 0; }
+.guarantee-title {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.guarantee-text { font-size: 13px; color: var(--text-sub); line-height: 1.65; }
+
+/* ══════════════════════════════
+   FAQ
+══════════════════════════════ */
+#faq { background: var(--bg); }
+
+.faq-list { display: flex; flex-direction: column; gap: 6px; }
+.faq-item {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.faq-q {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  transition: color .15s;
+}
+.faq-q:hover { color: var(--gold); }
+.faq-plus {
+  font-size: 18px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform .2s;
+  line-height: 1;
+}
+.faq-plus.open { transform: rotate(45deg); }
+.faq-a {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.7;
+  padding: 0 1.25rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease, padding .25s ease;
+}
+.faq-a.open { max-height: 200px; padding: 0 1.25rem 1rem; }
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+footer {
+  background: #040310;
+  border-top: 0.5px solid var(--border);
+  padding: 48px 0 32px;
+  text-align: center;
+}
+.footer-brand {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.footer-brand span { color: var(--gold); }
+.footer-tagline { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.footer-links a {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color .15s;
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-copy { font-size: 11px; color: var(--text-muted); opacity: .5; line-height: 1.7; }
+
+/* ══════════════════════════════
+   ANIMATIONS
+══════════════════════════════ */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ══════════════════════════════
+   CAROUSEL
+══════════════════════════════ */
+.carousel-wrap {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  padding: 32px 0;
+  position: relative;
+}
+.carousel-wrap::before,
+.carousel-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+.carousel-wrap::after  { right: 0; background: linear-gradient(270deg, var(--bg), transparent); }
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  animation: scrollCarousel 32s linear infinite;
+  width: max-content;
+}
+.carousel-track:hover { animation-play-state: paused; }
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(245,158,11,0.4);
+  box-shadow: 0 0 16px rgba(245,158,11,0.12), 0 0 32px rgba(245,158,11,0.06);
+  transition: box-shadow .3s, transform .3s;
+}
+.carousel-slide:hover {
+  box-shadow: 0 0 28px rgba(245,158,11,0.35), 0 0 56px rgba(245,158,11,0.15);
+  transform: scale(1.03);
+}
+.carousel-slide img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes scrollCarousel {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-236px * 11)); }
+}
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 600px) {
+  .section { padding: 56px 0; }
+  .inside-grid { grid-template-columns: repeat(2, 1fr); }
+  .inside-strip { gap: 20px; }
+  .foryou-grid { grid-template-columns: 1fr; }
+  .bonus-grid { grid-template-columns: 1fr; }
+  .offer-total-row { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section id="hero" class="pattern-bg">
+  <div class="container">
+    <h1 class="hero-h1">+1,250 BOOKS OF MAGIC<br>FOR LESS THAN <span class="gold">A CUP OF COFFEE!</span></h1>
+    <p class="hero-sub">Spells, grimoires, Wicca, herbalism, moon rituals, divination, occult and more — the complete witchcraft library, yours to print and keep forever.</p>
+    <img src="images/mockup.webp" alt="The Complete Witchcraft Library" class="hero-mockup">
+    <div class="hero-price-block">
+      <div class="hero-price-old">Regular price $97</div>
+      <div class="hero-price-new">$19.99</div>
+    </div>
+    <div class="hero-cta-wrap">
+      <a href="#offer" class="btn-gold">I Want The Complete Witchcraft Library →</a>
+      <div class="hero-trust">⬇ <span>Instant download</span> &nbsp;·&nbsp; 📄 <span>PDF & printable</span> &nbsp;·&nbsp; ∞ <span>No subscription</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT'S INSIDE ══ -->
+<section id="inside" class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-headline">Everything your practice needs<br><span class="gold">All in one place</span></h2>
+    <p class="section-sub">+1,250 books and printables across every path — from beginner rituals to advanced occult theory.</p>
+    <div class="inside-grid">
+      <div class="inside-card"><div class="inside-icon-box">🕯️</div><div class="inside-name">Spells & Rituals</div><div class="inside-desc">Candle magic, binding, protection, love, abundance and seasonal ceremonies.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">📖</div><div class="inside-name">Grimoires & Book of Shadows</div><div class="inside-desc">Hundreds of real grimoires and Books of Shadows — complete, ready to download and study.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">🌙</div><div class="inside-name">Wicca & Paganism</div><div class="inside-desc">Sabbats, esbats, deities, the Wheel of the Year and Wiccan traditions.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">🌿</div><div class="inside-name">Herbalism & Potions</div><div class="inside-desc">Magical properties of herbs, teas, oils, tinctures and plant correspondences.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">🔮</div><div class="inside-name">Divination</div><div class="inside-desc">Tarot, runes, pendulum, scrying, tea leaf reading and oracle work.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">⭐</div><div class="inside-name">Occult & Esoteric</div><div class="inside-desc">Kabbalah, alchemy, sigils, numerology, sacred geometry and ceremonial magic.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">🪐</div><div class="inside-name">Moon & Astrology</div><div class="inside-desc">Lunar phases, moon rituals, planetary magic and astrological correspondences.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">🖤</div><div class="inside-name">Shadow Work</div><div class="inside-desc">Inner work prompts, self-discovery rituals and emotional alchemy practices.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">🧙</div><div class="inside-name">Folk Magic & Witchcraft</div><div class="inside-desc">Kitchen witch, hedge witch, green witch and traditional folk spell traditions.</div></div>
+      <div class="inside-card"><div class="inside-icon-box">💎</div><div class="inside-name">Crystals & Energy</div><div class="inside-desc">Crystal properties, grids, chakra work, energy cleansing and altar guides.</div></div>
+    </div>
+    <div class="inside-strip">
+      <div class="strip-item"><span class="strip-num">+1,250</span><span class="strip-lbl">Books & printables</span></div>
+      <div class="strip-item"><span class="strip-num">10+</span><span class="strip-lbl">Paths & traditions</span></div>
+      <div class="strip-item"><span class="strip-num">PDF</span><span class="strip-lbl">Instant download</span></div>
+      <div class="strip-item"><span class="strip-num">∞</span><span class="strip-lbl">Print as many as you want</span></div>
+    </div>
+    <p class="inside-closing">Whether you're just starting out or deepening a practice you've had for years — there's something here for every witch.</p>
+
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide"><img src="images/slide-1.webp" alt="Preview 1"></div>
+        <div class="carousel-slide"><img src="images/slide-2.webp" alt="Preview 2"></div>
+        <div class="carousel-slide"><img src="images/slide-3.webp" alt="Preview 3"></div>
+        <div class="carousel-slide"><img src="images/slide-4.webp" alt="Preview 4"></div>
+        <div class="carousel-slide"><img src="images/slide-5.webp" alt="Preview 5"></div>
+        <div class="carousel-slide"><img src="images/slide-6.webp" alt="Preview 6"></div>
+        <div class="carousel-slide"><img src="images/slide-7.webp" alt="Preview 7"></div>
+        <div class="carousel-slide"><img src="images/slide-8.webp" alt="Preview 8"></div>
+        <div class="carousel-slide"><img src="images/slide-9.webp" alt="Preview 9"></div>
+        <div class="carousel-slide"><img src="images/slide-10.webp" alt="Preview 10"></div>
+        <div class="carousel-slide"><img src="images/slide-11.webp" alt="Preview 11"></div>
+        <div class="carousel-slide"><img src="images/slide-1.webp" alt="Preview 1"></div>
+        <div class="carousel-slide"><img src="images/slide-2.webp" alt="Preview 2"></div>
+        <div class="carousel-slide"><img src="images/slide-3.webp" alt="Preview 3"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOR YOU ══ -->
+<section id="foryou" class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-headline">This Is for You If....</h2>
+    <div class="foryou-grid">
+      <div class="foryou-card foryou-card-1">
+        <div class="foryou-icon foryou-icon-1">☽</div>
+        <span class="foryou-label label-1">Just starting out</span>
+        <hr class="foryou-sep sep-1">
+        <div class="foryou-bullet"><span class="bullet-dot dot-1"></span><span>You've been watching WitchTok and finally want to go deeper.</span></div>
+        <div class="foryou-bullet"><span class="bullet-dot dot-1"></span><span>You want to start a grimoire but don't know where to begin.</span></div>
+        <div class="foryou-bullet"><span class="bullet-dot dot-1"></span><span>You're curious about Wicca and spells but feel overwhelmed by how much is out there.</span></div>
+      </div>
+      <div class="foryou-card foryou-card-2">
+        <div class="foryou-icon foryou-icon-2">✦</div>
+        <span class="foryou-label label-2">Deepening your practice</span>
+        <hr class="foryou-sep sep-2">
+        <div class="foryou-bullet"><span class="bullet-dot dot-2"></span><span>You've been practicing for a while and want to explore new paths and traditions.</span></div>
+        <div class="foryou-bullet"><span class="bullet-dot dot-2"></span><span>You're tired of searching across dozens of websites for good reference material.</span></div>
+        <div class="foryou-bullet"><span class="bullet-dot dot-2"></span><span>You want everything organized, printable and ready to use in your rituals.</span></div>
+      </div>
+      <div class="foryou-card foryou-card-3">
+        <div class="foryou-icon foryou-icon-3">⊹</div>
+        <span class="foryou-label label-3">Spiritual & wellness path</span>
+        <hr class="foryou-sep sep-3">
+        <div class="foryou-bullet"><span class="bullet-dot dot-3"></span><span>You blend spirituality with self-care — moon rituals, journaling, intention setting.</span></div>
+        <div class="foryou-bullet"><span class="bullet-dot dot-3"></span><span>You want beautiful printable pages to make your practice feel truly yours.</span></div>
+        <div class="foryou-bullet"><span class="bullet-dot dot-3"></span><span>You're drawn to shadow work, herbalism and the magic of everyday life.</span></div>
+      </div>
+    </div>
+    <p class="foryou-closing">Every witch. Every path. Every level.<br><span style="font-size:13px;font-style:normal;">It doesn't matter where you are in your practice. This library was made for all of it.</span></p>
+  </div>
+</section>
+
+<!-- ══ REVIEWS ══ -->
+<section id="reviews" class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-headline">Loved by witches worldwide</h2>
+    <p class="section-sub">Real reviews from real practitioners.</p>
+    <div class="stars-summary">
+      <span class="stars-big">★★★★★</span>
+      <span class="stars-num">4.9</span>
+      <span class="stars-lbl">— verified reviews</span>
+    </div>
+    <div class="reviews-outer">
+      <div class="reviews-track">
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"The amount of books is insane! It will take a very long time to read everything!"</p><div class="review-footer"><div class="review-avatar">M</div><div><div class="review-name">Melissa</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"SO MANY BOOKS AND SO MUCH INFORMATION!! Definitely worth the money!!!"</p><div class="review-footer"><div class="review-avatar">S</div><div><div class="review-name">Samantha</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"An amazing selection of books! I appreciate the knowledge included in this bundle. So mote it be."</p><div class="review-footer"><div class="review-avatar">A</div><div><div class="review-name">April</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Wow! It is amazing to see all these spells! Totally worth it!"</p><div class="review-footer"><div class="review-avatar">S</div><div><div class="review-name">Stephanie</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Great information, so many amazing books!!! I was not disappointed. Thank you for all the great information."</p><div class="review-footer"><div class="review-avatar">T</div><div><div class="review-name">Tricia</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"An extensive list of reading materials. Super affordable, and the books are very helpful and informative."</p><div class="review-footer"><div class="review-avatar">J</div><div><div class="review-name">Josh</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"So much great information! I am going to have so much fun going through everything."</p><div class="review-footer"><div class="review-avatar">G</div><div><div class="review-name">Genesis</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Totally worth it!!! Lots of useful information. Great for any growing collection. You can never go wrong with more books about magic 😁"</p><div class="review-footer"><div class="review-avatar">L</div><div><div class="review-name">Lindsay</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Amazing books to have as part of the collection."</p><div class="review-footer"><div class="review-avatar">L</div><div><div class="review-name">Lilita</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Perfect quality, thank you!"</p><div class="review-footer"><div class="review-avatar">J</div><div><div class="review-name">Jurga</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"The amount of books is insane! It will take a very long time to read everything!"</p><div class="review-footer"><div class="review-avatar">M</div><div><div class="review-name">Melissa</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"SO MANY BOOKS AND SO MUCH INFORMATION!! Definitely worth the money!!!"</p><div class="review-footer"><div class="review-avatar">S</div><div><div class="review-name">Samantha</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"An amazing selection of books! I appreciate the knowledge included in this bundle. So mote it be."</p><div class="review-footer"><div class="review-avatar">A</div><div><div class="review-name">April</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+        <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Wow! It is amazing to see all these spells! Totally worth it!"</p><div class="review-footer"><div class="review-avatar">S</div><div><div class="review-name">Stephanie</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
+      </div>
+    </div>
+    <div class="reviews-bottom">
+      <div class="reviews-bottom-item"><span class="gold">★</span> 4.9 average rating</div>
+      <div class="reviews-bottom-item"><span style="color:#6EE7B7">✓</span> All verified purchases</div>
+      <div class="reviews-bottom-item"><span style="color:var(--purple-light)">⬇</span> Instant digital delivery</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BONUS ══ -->
+<section id="bonus" class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-headline"><span class="gold">4 Exclusive Bonuses</span><br>Included for Free</h2>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <div class="bonus-img-wrap"><img src="images/bonus-1.webp" alt="Tarot Collection"></div>
+        <div class="bonus-body">
+          <span class="bonus-tag">✦ Bonus 1</span>
+          <div class="bonus-name">Tarot Collection</div>
+          <div class="bonus-desc">Complete tarot library — spreads, card meanings, history and reading techniques for every level.</div>
+          <div class="bonus-value"><span class="val-strike">$27 value</span><span class="val-free">FREE</span></div>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-img-wrap"><img src="images/bonus-2.webp" alt="Astrology Library"></div>
+        <div class="bonus-body">
+          <span class="bonus-tag">✦ Bonus 2</span>
+          <div class="bonus-name">Astrology Library</div>
+          <div class="bonus-desc">Planets, signs, houses, natal charts and astrological magic — weave the stars into your practice.</div>
+          <div class="bonus-value"><span class="val-strike">$27 value</span><span class="val-free">FREE</span></div>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-img-wrap"><img src="images/bonus-3.webp" alt="Kabbalah Collection"></div>
+        <div class="bonus-body">
+          <span class="bonus-tag">✦ Bonus 3</span>
+          <div class="bonus-name">Kabbalah Collection</div>
+          <div class="bonus-desc">The Tree of Life, Sephiroth, sacred texts and Kabbalistic magical practice for those who want to go deeper.</div>
+          <div class="bonus-value"><span class="val-strike">$27 value</span><span class="val-free">FREE</span></div>
+        </div>
+      </div>
+      <div class="bonus-card">
+        <div class="bonus-img-wrap"><img src="images/bonus-4.webp" alt="Hermetic Library"></div>
+        <div class="bonus-body">
+          <span class="bonus-tag">✦ Bonus 4</span>
+          <div class="bonus-name">Hermetic Library</div>
+          <div class="bonus-desc">Hermeticism, alchemy, sacred geometry and the foundations of Western esoteric tradition.</div>
+          <div class="bonus-value"><span class="val-strike">$27 value</span><span class="val-free">FREE</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ OFFER ══ -->
+<section id="offer" class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-headline">Everything You Get Today:</h2>
+    <img src="images/mockup.webp" alt="The Complete Witchcraft Library" style="width:100%;max-width:560px;display:block;margin:32px auto;border-radius:16px;border:1px solid rgba(139,92,246,0.25);box-shadow:0 0 60px rgba(124,58,237,0.2),0 0 120px rgba(245,158,11,0.06)">
+    <div class="offer-stack">
+      <div class="offer-item main"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">The Complete Witchcraft Library</div><div class="offer-desc">+1,250 books — spells, grimoires, Wicca, herbalism, moon rituals, divination, occult and more.</div></div><div class="offer-val"><span class="offer-val-strike">$97</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 1 — Tarot Collection</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 2 — Astrology Library</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 3 — Kabbalah Collection</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 4 — Hermetic Library</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Lifetime Access</div></div><div class="offer-val"><span style="font-size:11px;font-weight:600;color:#6EE7B7">Forever</span></div></div>
+    </div>
+    <div class="offer-total-row">
+      <span class="offer-total-label" style="text-transform:uppercase;letter-spacing:.06em;font-weight:600">TOTAL VALUE</span>
+      <div class="offer-total-nums"><span class="offer-total-price">$205.00</span></div>
+    </div>
+    <div style="text-align:center;margin:32px 0 8px">
+      <p style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--text);letter-spacing:.04em;line-height:1.6;text-transform:uppercase">Today You Get It All For A Single One-Time Payment Of:</p>
+    </div>
+    <div class="offer-price-center">
+      <div class="offer-price-big">$19.99</div>
+      <div style="display:inline-block;margin-top:12px;padding:6px 18px;border-radius:8px;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.3)">
+        <span style="font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:#6EE7B7;letter-spacing:.04em;text-transform:uppercase">You save $185.01 today</span>
+      </div>
+    </div>
+    <div class="offer-cta-wrap">
+      <a href="#" class="btn-gold">Get Instant Access — $19.99 →</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><span class="trust-icon">🔒</span> Secure checkout</div>
+      <div class="trust-item"><span class="trust-icon">⬇</span> Instant delivery</div>
+      <div class="trust-item"><span class="trust-icon">🖨</span> Print unlimited</div>
+      <div class="trust-item"><span class="trust-icon">∞</span> Yours forever</div>
+    </div>
+    <div style="text-align:center;margin-bottom:24px">
+      <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#6EE7B7;margin-bottom:14px">
+        <span style="font-size:14px">⊕</span> Secure SSL Payment — Your data is protected
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap">
+        <div style="background:#1a1535;border:0.5px solid var(--border);border-radius:8px;padding:6px 12px;display:flex;align-items:center;justify-content:center;height:40px"><img src="images/visa.webp" alt="Visa" style="height:24px;width:auto;display:block"></div>
+        <div style="background:#1a1535;border:0.5px solid var(--border);border-radius:8px;padding:6px 12px;display:flex;align-items:center;justify-content:center;height:40px"><img src="images/master.webp" alt="Mastercard" style="height:24px;width:auto;display:block"></div>
+        <div style="background:#1a1535;border:0.5px solid var(--border);border-radius:8px;padding:6px 12px;display:flex;align-items:center;justify-content:center;height:40px"><img src="images/paypal.webp" alt="PayPal" style="height:24px;width:auto;display:block"></div>
+        <div style="background:#1a1535;border:0.5px solid var(--border);border-radius:8px;padding:6px 12px;display:flex;align-items:center;justify-content:center;height:40px"><img src="images/amex.webp" alt="Amex" style="height:24px;width:auto;display:block"></div>
+      </div>
+    </div>
+    <div class="decision-block">
+      <div class="decision-title">You have a decision to make. And I think it's an easy one.</div>
+      <p class="decision-text">For less than a cup of coffee, you get <strong>+1,250 books of magic</strong>, 4 exclusive bonus collections, and a complete library to build your practice — yours to print and keep forever.<br><br>After your purchase, you'll have <strong>instant access</strong>. No waiting, no shipping. You can start exploring your grimoire in minutes.</p>
+    </div>
+    <div class="guarantee">
+      <div class="guarantee-icon">🛡</div>
+      <div>
+        <div class="guarantee-title" style="color:var(--gold)">30-Day Money-Back Guarantee</div>
+        <div class="guarantee-text">Not satisfied? Contact us within 30 days and we'll refund every penny. No questions asked.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-headline">Frequently Asked <span class="gold">Questions</span></h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What exactly am I getting?<span class="faq-plus">+</span></button><div class="faq-a">You get a digital download with +1,250 books covering witchcraft, Wicca, spells, grimoires, herbalism, divination, moon rituals, occult and more — plus 4 exclusive bonus collections: Tarot, Astrology, Kabbalah and Hermetic. Everything arrives in PDF format, ready to read or print.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I receive my order?<span class="faq-plus">+</span></button><div class="faq-a">Instantly. Right after your purchase you'll receive a download link by email. No waiting, no shipping. You can start exploring your library in minutes.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I print the books?<span class="faq-plus">+</span></button><div class="faq-a">Yes — print as many copies as you want, as many times as you want. Use them to build your grimoire, decorate your altar space, or study at your own pace. They're yours forever.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is this for beginners or experienced practitioners?<span class="faq-plus">+</span></button><div class="faq-a">Both. The library covers everything from beginner-friendly introductions to Wicca and basic spells, all the way to advanced occult theory, Kabbalah and ceremonial magic. Whatever level you're at, there's something here for you.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What format are the files?<span class="faq-plus">+</span></button><div class="faq-a">All files are in PDF format, compatible with any device — phone, tablet, computer. You can read them digitally or print them at home or at any print shop.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What if I'm not satisfied?<span class="faq-plus">+</span></button><div class="faq-a">We offer a 30-day money-back guarantee. If you're not completely happy with your purchase for any reason, contact us within 30 days and we'll refund every penny. No questions asked.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is this a subscription?<span class="faq-plus">+</span></button><div class="faq-a">No. This is a one-time payment of $19.99. No recurring charges, no hidden fees. You pay once and the library is yours forever.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do I need special software to open the files?<span class="faq-plus">+</span></button><div class="faq-a">No special software needed. PDFs open on any device with a free PDF reader — including the built-in readers on iPhone, Android, Mac and Windows.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">✦ The <span>Witchcraft</span> Library</div>
+    <div class="footer-tagline">+1,250 books of magic. One download.</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Refund Policy</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-copy">© 2025 The Witchcraft Library. All rights reserved.<br>This is a digital product. No physical items will be shipped.</div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const a = btn.nextElementSibling;
+  const plus = btn.querySelector('.faq-plus');
+  const isOpen = a.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(el => el.classList.remove('open'));
+  document.querySelectorAll('.faq-plus.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) { a.classList.add('open'); plus.classList.add('open'); }
+}
+</script>
+
+</body>
+</html>
