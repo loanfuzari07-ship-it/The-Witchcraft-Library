@@ -219,7 +219,7 @@ h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
 }
 .hero-price-new {
   font-family: 'Cinzel', serif;
-  font-size: clamp(36px, 5vw, 52px);
+  font-size: clamp(52px, 7vw, 80px);
   font-weight: 700;
   color: var(--gold);
   line-height: 1;
@@ -959,6 +959,10 @@ footer {
    RESPONSIVE
 ══════════════════════════════ */
 @media (max-width: 600px) {
+  .hero-price-new { font-size: 64px !important; }
+  .offer-price-big { font-size: 72px !important; }
+}
+@media (max-width: 600px) {
   #bonus table tr { display: block; }
   #bonus table td { display: block; width: 100% !important; margin-bottom: 12px; }
 }
@@ -1114,7 +1118,7 @@ footer {
 <section id="bonus" class="section">
   <div class="container">
     <div class="divider"></div>
-    <h2 class="section-headline"><span class="gold">4 Exclusive Bonuses</span><br>Included for Free</h2>
+    <h2 class="section-headline" style="margin-bottom:2rem"><span class="gold">4 Exclusive Bonuses</span><br>Included for Free</h2>
 
     <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate;border-spacing:12px">
       <tr>
@@ -1227,7 +1231,7 @@ footer {
 <section id="faq" class="section">
   <div class="container">
     <div class="divider"></div>
-    <h2 class="section-headline">Frequently Asked <span class="gold">Questions</span></h2>
+    <h2 class="section-headline" style="margin-bottom:2rem">Frequently Asked <span class="gold">Questions</span></h2>
     <div class="faq-list">
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What exactly am I getting?<span class="faq-plus">+</span></button><div class="faq-a">You get a digital download with +1,250 books covering witchcraft, Wicca, spells, grimoires, herbalism, divination, moon rituals, occult and more — plus 4 exclusive bonus collections: Tarot, Astrology, Kabbalah and Hermetic. Everything arrives in PDF format, ready to read or print.</div></div>
       <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I receive my order?<span class="faq-plus">+</span></button><div class="faq-a">Instantly. Right after your purchase you'll receive a download link by email. No waiting, no shipping. You can start exploring your library in minutes.</div></div>
