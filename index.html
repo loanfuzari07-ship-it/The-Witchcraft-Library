@@ -309,7 +309,7 @@ h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
   display: block;
   margin-bottom: 4px;
 }
-.strip-lbl { font-size: 11px; color: var(--text-muted); letter-spacing: .04em; }
+.strip-lbl { font-size: 11px; color: var(--text-sub); letter-spacing: .04em; }
 .inside-closing {
   text-align: center;
   font-size: 14px;
@@ -553,7 +553,7 @@ h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--text-sub);
 }
 .reviews-bottom-item .gold { font-size: 14px; }
 
@@ -783,7 +783,7 @@ h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
   align-items: center;
   gap: 6px;
   font-size: 11px;
-  color: var(--text-muted);
+  color: var(--text-sub);
 }
 .trust-icon { font-size: 14px; color: var(--purple-light); }
 
@@ -974,6 +974,42 @@ footer {
   .bonus-grid { grid-template-columns: 1fr; }
   .offer-total-row { flex-direction: column; gap: 8px; }
 }
+
+/* ══════════════════════════════
+   EXPERT
+══════════════════════════════ */
+.expert-wrap {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+}
+.expert-img-col {
+  flex-shrink: 0;
+}
+.expert-img {
+  width: 280px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 20px;
+  border: 1px solid rgba(245,158,11,0.25);
+  box-shadow: 0 0 40px rgba(124,58,237,0.15), 0 0 80px rgba(245,158,11,0.06);
+  display: block;
+}
+.expert-text-col {
+  flex: 1;
+}
+@media (max-width: 640px) {
+  .expert-wrap {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .expert-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 561/701;
+  }
+}
 </style>
 </head>
 <body>
@@ -981,7 +1017,7 @@ footer {
 <!-- ══ HERO ══ -->
 <section id="hero" class="pattern-bg">
   <div class="container">
-    <h1 class="hero-h1">+1,250 BOOKS OF MAGIC<br>FOR LESS THAN <span class="gold">A CUP OF COFFEE!</span></h1>
+    <h1 class="hero-h1">+1,250 WITCHCRAFT BOOKS<br>FOR LESS THAN <span class="gold">A CUP OF COFFEE!</span></h1>
     <p class="hero-sub">Spells, grimoires, Wicca, herbalism, moon rituals, divination, occult and more — the complete witchcraft library, yours to print and keep forever.</p>
     <img src="images/mockup.webp" alt="The Complete Witchcraft Library" class="hero-mockup">
     <div class="hero-price-block">
@@ -1073,7 +1109,7 @@ footer {
         <div class="foryou-bullet"><span class="bullet-dot dot-3"></span><span>You're drawn to shadow work, herbalism and the magic of everyday life.</span></div>
       </div>
     </div>
-    <p class="foryou-closing">Every witch. Every path. Every level.<br><span style="font-size:13px;font-style:normal;">It doesn't matter where you are in your practice. This library was made for all of it.</span></p>
+    <p class="foryou-closing"><span style="color:var(--gold)">Every witch. Every path. Every level.</span><br><span style="font-size:13px;font-style:normal;">It doesn't matter where you are in your practice. This library was made for all of it.</span></p>
   </div>
 </section>
 
@@ -1085,7 +1121,7 @@ footer {
     <p class="section-sub">Real reviews from real practitioners.</p>
     <div class="stars-summary">
       <span class="stars-big">★★★★★</span>
-      <span class="stars-num">4.9</span>
+      <span class="stars-num">4.87</span>
       <span class="stars-lbl">— verified reviews</span>
     </div>
     <div class="reviews-outer">
@@ -1107,7 +1143,7 @@ footer {
       </div>
     </div>
     <div class="reviews-bottom">
-      <div class="reviews-bottom-item"><span class="gold">★</span> 4.9 average rating</div>
+      <div class="reviews-bottom-item"><span class="gold">★</span> 4.87 average rating</div>
       <div class="reviews-bottom-item"><span style="color:#6EE7B7">✓</span> All verified purchases</div>
       <div class="reviews-bottom-item"><span style="color:var(--purple-light)">⬇</span> Instant digital delivery</div>
     </div>
@@ -1182,7 +1218,7 @@ footer {
     </div>
     <div class="offer-total-row">
       <span class="offer-total-label" style="text-transform:uppercase;letter-spacing:.06em;font-weight:600">TOTAL VALUE</span>
-      <div class="offer-total-nums"><span class="offer-total-price">$205.00</span></div>
+      <div class="offer-total-nums"><span class="offer-total-price" style="text-decoration:line-through;text-decoration-color:rgba(245,158,11,0.4);text-decoration-thickness:1px">$205.00</span></div>
     </div>
     <div style="text-align:center;margin:32px 0 8px">
       <p style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;color:var(--text);letter-spacing:.04em;line-height:1.6;text-transform:uppercase">Today You Get It All For A Single One-Time Payment Of:</p>
@@ -1227,6 +1263,33 @@ footer {
   </div>
 </section>
 
+
+<!-- ══ EXPERT ══ -->
+<section id="expert" style="background:var(--bg);padding:80px 0">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-headline" style="margin-bottom:3rem">Who Is Behind<br><span class="gold">This Library?</span></h2>
+
+    <div style="background:var(--card);border:0.5px solid var(--border);border-radius:20px;padding:2.5rem">
+      <div class="expert-wrap">
+        <div class="expert-img-col">
+          <img src="images/expert.webp" alt="Luna Blackwood — The Librarian Witch" class="expert-img">
+        </div>
+        <div class="expert-text-col">
+          <p style="font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:var(--text-sub);margin-bottom:6px;letter-spacing:.06em">Hello, witches.</p>
+          <h3 style="font-family:'Cinzel',serif;font-size:26px;font-weight:700;color:var(--text);margin-bottom:4px">Luna Blackwood</h3>
+          <p style="font-size:13px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:20px">The Librarian Witch</p>
+          <div style="width:40px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:20px"></div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:14px">I've spent years collecting the most powerful witchcraft texts I could find — grimoires, spell books, Wicca, herbalism, divination, the occult.</p>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:14px">At some point I realized: this knowledge shouldn't be scattered across a hundred websites or locked behind paywalls.</p>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:24px"><strong style="color:var(--text)">So I built this library for you.</strong> Every witch. Every path. Every level.</p>
+          <p style="font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:var(--text);font-style:italic">Welcome to The Witchcraft Library.<br><span style="color:var(--gold)">May your practice be powerful. ✦</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(139,92,246,0.3),rgba(245,158,11,0.3),rgba(139,92,246,0.3),transparent);margin:0"></div>
 <!-- ══ FAQ ══ -->
 <section id="faq" class="section">
   <div class="container">
