@@ -199,7 +199,7 @@ h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
   font-size: clamp(14px, 1.8vw, 17px);
   color: var(--text-sub);
   max-width: 560px;
-  margin: 0 auto 40px;
+  margin: 0 auto 16px;
   line-height: 1.75;
   animation: fadeDown .6s .2s ease both;
 }
@@ -208,7 +208,7 @@ h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
   max-width: 560px;
   height: auto;
   object-fit: contain;
-  margin: 0 auto 40px;
+  margin: 0 auto 16px;
   border-radius: 16px;
   border: 1px solid rgba(139,92,246,0.25);
   box-shadow: 0 0 60px rgba(124,58,237,0.2), 0 0 120px rgba(245,158,11,0.06);
@@ -1040,16 +1040,20 @@ footer {
 <!-- ══ HERO ══ -->
 <section id="hero" class="pattern-bg">
   <div class="container">
-    <h1 class="hero-h1">+1,250 WITCHCRAFT BOOKS<br>FOR LESS THAN <span class="gold">A CUP OF COFFEE!</span></h1>
-    <p class="hero-sub">Spells, grimoires, Wicca, herbalism, moon rituals, divination, occult and more — the complete witchcraft library, yours to print and keep forever.</p>
-    <img src="images/mockup.webp" alt="The Complete Witchcraft Library" class="hero-mockup" fetchpriority="high" loading="eager" decoding="sync" width="560" height="560">
-    <div class="hero-price-block">
-      <div class="hero-price-old">Regular price $97</div>
-      <div class="hero-price-new">$19.99</div>
+    <h1 class="hero-h1">BECOME THE <span class="gold">MOST POWERFUL WITCH</span><br>WITH THESE BOOKS!</h1>
+    <p style="font-size:clamp(14px,2vw,17px);color:var(--text);max-width:560px;margin:0 auto 32px;line-height:1.7;text-align:center"><span style="color:var(--gold);font-weight:700">+1,250 fool proof witchcraft books</span> for less than a single book on Amazon!</p>
+
+    <img src="images/mockup.webp" alt="The Complete Witchcraft Library" class="hero-mockup" fetchpriority="high" loading="eager" decoding="sync" width="768" height="512">
+    <div style="text-align:center;margin-bottom:16px;padding:0 12px">
+    </div>
+    <p style="font-size:14px;color:var(--text);line-height:1.7;max-width:520px;margin:0 auto 16px;text-align:center;padding-top:0">Spells, grimoires, Wicca, herbalism, moon rituals, divination, occult and more — <strong>the complete witchcraft library, yours forever.</strong></p>
+    <div style="text-align:center;margin-bottom:20px;font-size:14px;color:var(--text-sub)">
+      <span style="color:var(--gold)">★★★★★</span> <strong style="color:var(--text)">4.87</strong> — Verified Witches
     </div>
     <div class="hero-cta-wrap">
-      <a href="#offer" class="btn-gold">I Want The Complete Witchcraft Library →</a>
-      <div class="hero-trust">⬇ <span>Instant download</span> &nbsp;·&nbsp; 📄 <span>PDF & printable</span> &nbsp;·&nbsp; ∞ <span>No subscription</span></div>
+      <a href="#offer" class="btn-gold">🔮 I Want The Complete Witchcraft Library →</a>
+      <div class="hero-trust">⬇ <span>Instant download</span> &nbsp;·&nbsp; 📄 <span>PDF Files</span> &nbsp;·&nbsp; ∞ <span>One-time payment</span></div>
+      <div style="font-size:13px;color:var(--gold);margin-top:10px;letter-spacing:.02em">✦ Instant Access to 4 Bonuses</div>
     </div>
   </div>
 </section>
@@ -1059,7 +1063,7 @@ footer {
   <div class="container">
     <div class="divider"></div>
     <h2 class="section-headline">Everything your practice needs<br><span class="gold">All in one place</span></h2>
-    <p class="section-sub">+1,250 books and printables across every path — from beginner rituals to advanced occult theory.</p>
+    <p class="section-sub">From beginner rituals to advanced occult theory.</p>
     <div class="inside-grid">
       <div class="inside-card"><div class="inside-icon-box">🕯️</div><div class="inside-name">Spells & Rituals</div><div class="inside-desc">Candle magic, binding, protection, love, abundance and seasonal ceremonies.</div></div>
       <div class="inside-card"><div class="inside-icon-box">📖</div><div class="inside-name">Grimoires & Book of Shadows</div><div class="inside-desc">Hundreds of real grimoires and Books of Shadows — complete, ready to download and study.</div></div>
@@ -1073,10 +1077,10 @@ footer {
       <div class="inside-card"><div class="inside-icon-box">💎</div><div class="inside-name">Crystals & Energy</div><div class="inside-desc">Crystal properties, grids, chakra work, energy cleansing and altar guides.</div></div>
     </div>
     <div class="inside-strip">
-      <div class="strip-item"><span class="strip-num">+1,250</span><span class="strip-lbl">Books & printables</span></div>
+      <div class="strip-item"><span class="strip-num">+1,250</span><span class="strip-lbl">Books</span></div>
       <div class="strip-item"><span class="strip-num">10+</span><span class="strip-lbl">Paths & traditions</span></div>
       <div class="strip-item"><span class="strip-num">PDF</span><span class="strip-lbl">Instant download</span></div>
-      <div class="strip-item"><span class="strip-num">∞</span><span class="strip-lbl">Print as many as you want</span></div>
+      <div class="strip-item"><span class="strip-num">∞</span><span class="strip-lbl">Yours forever</span></div>
     </div>
     <p class="inside-closing">Whether you're just starting out or deepening a practice you've had for years — there's something here for every witch.</p>
 
@@ -1142,11 +1146,6 @@ footer {
     <div class="divider"></div>
     <h2 class="section-headline">Loved by witches worldwide</h2>
     <p class="section-sub">Real reviews from real practitioners.</p>
-    <div class="stars-summary">
-      <span class="stars-big">★★★★★</span>
-      <span class="stars-num">4.87</span>
-      <span class="stars-lbl">— verified reviews</span>
-    </div>
     <div class="reviews-outer">
       <div class="reviews-track">
         <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"The amount of books is insane! It will take a very long time to read everything!"</p><div class="review-footer"><div class="review-avatar">M</div><div><div class="review-name">Melissa</div><div class="review-verified"><span style="color:#6EE7B7">✓</span> Verified purchase</div></div></div></div>
@@ -1187,7 +1186,7 @@ footer {
             <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">✦ Bonus 1</div>
             <div style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--text);text-transform:uppercase;margin-bottom:8px">Tarot Collection</div>
             <div style="font-size:12px;color:var(--text-sub);line-height:1.6;margin-bottom:12px">Complete tarot library — spreads, card meanings, history and reading techniques for every level.</div>
-            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE</span></div>
+            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE TODAY</span></div>
           </div>
         </td>
         <td width="50%" valign="top" style="background:var(--card);border:0.5px solid var(--border);border-radius:16px;overflow:hidden;padding:0">
@@ -1196,7 +1195,7 @@ footer {
             <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">✦ Bonus 2</div>
             <div style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--text);text-transform:uppercase;margin-bottom:8px">Astrology Library</div>
             <div style="font-size:12px;color:var(--text-sub);line-height:1.6;margin-bottom:12px">Planets, signs, houses, natal charts and astrological magic — weave the stars into your practice.</div>
-            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE</span></div>
+            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE TODAY</span></div>
           </div>
         </td>
       </tr>
@@ -1207,7 +1206,7 @@ footer {
             <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">✦ Bonus 3</div>
             <div style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--text);text-transform:uppercase;margin-bottom:8px">Kabbalah Collection</div>
             <div style="font-size:12px;color:var(--text-sub);line-height:1.6;margin-bottom:12px">The Tree of Life, Sephiroth, sacred texts and Kabbalistic magical practice for those who want to go deeper.</div>
-            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE</span></div>
+            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE TODAY</span></div>
           </div>
         </td>
         <td width="50%" valign="top" style="background:var(--card);border:0.5px solid var(--border);border-radius:16px;overflow:hidden;padding:0">
@@ -1216,7 +1215,7 @@ footer {
             <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px">✦ Bonus 4</div>
             <div style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--text);text-transform:uppercase;margin-bottom:8px">Hermetic Library</div>
             <div style="font-size:12px;color:var(--text-sub);line-height:1.6;margin-bottom:12px">Hermeticism, alchemy, sacred geometry and the foundations of Western esoteric tradition.</div>
-            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE</span></div>
+            <div style="display:flex;align-items:center;gap:8px;padding-top:10px;border-top:0.5px solid rgba(139,92,246,0.2);font-size:11px;color:var(--text-muted)"><span style="text-decoration:line-through">$27 value</span><span style="font-weight:700;color:#6EE7B7;background:rgba(110,231,183,0.08);border:0.5px solid rgba(110,231,183,0.25);padding:2px 10px;border-radius:999px">FREE TODAY</span></div>
           </div>
         </td>
       </tr>
@@ -1228,16 +1227,50 @@ footer {
 <!-- ══ OFFER ══ -->
 <section id="offer" class="section">
   <div class="container">
+    <div style="background:var(--card);border:0.5px solid rgba(245,158,11,0.3);border-radius:16px;padding:28px 24px;text-align:center;margin-bottom:32px">
+      <div style="font-family:'Cinzel',serif;font-size:16px;font-weight:700;color:var(--gold);margin-bottom:8px;letter-spacing:.06em">⚡ TODAY'S OFFER!</div>
+      <div style="font-size:13px;color:var(--text-sub);margin-bottom:20px">Offer valid for <strong style="color:var(--text)">15 minutes</strong>. If you don't act now, your discount goes to the next person.</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px">
+        <div style="text-align:center">
+          <div id="timer-minutes" style="font-family:'Cinzel',serif;font-size:52px;font-weight:700;color:var(--gold);line-height:1;text-shadow:0 0 20px rgba(245,158,11,0.35)">15</div>
+          <div style="font-size:10px;color:var(--text-muted);letter-spacing:.12em;text-transform:uppercase;margin-top:6px">Minutes</div>
+        </div>
+        <div style="font-family:'Cinzel',serif;font-size:44px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:16px">:</div>
+        <div style="text-align:center">
+          <div id="timer-seconds" style="font-family:'Cinzel',serif;font-size:52px;font-weight:700;color:var(--gold);line-height:1;text-shadow:0 0 20px rgba(245,158,11,0.35)">00</div>
+          <div style="font-size:10px;color:var(--text-muted);letter-spacing:.12em;text-transform:uppercase;margin-top:6px">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      var total = 15 * 60;
+      var stored = sessionStorage.getItem('wtimer');
+      var end = stored ? parseInt(stored) : Date.now() + total * 1000;
+      if(!stored) sessionStorage.setItem('wtimer', end);
+      function update(){
+        var diff = Math.max(0, Math.floor((end - Date.now()) / 1000));
+        var m = Math.floor(diff / 60);
+        var s = diff % 60;
+        document.getElementById('timer-minutes').textContent = String(m).padStart(2,'0');
+        document.getElementById('timer-seconds').textContent = String(s).padStart(2,'0');
+        if(diff > 0) setTimeout(update, 1000);
+      }
+      update();
+    })();
+    </script>
+
     <div class="divider"></div>
     <h2 class="section-headline">Everything You Get Today:</h2>
     <img src="images/mockup.webp" alt="The Complete Witchcraft Library" style="width:100%;max-width:560px;display:block;margin:32px auto;border-radius:16px;border:1px solid rgba(139,92,246,0.25);box-shadow:0 0 60px rgba(124,58,237,0.2),0 0 120px rgba(245,158,11,0.06)">
     <div class="offer-stack">
       <div class="offer-item main"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">The Complete Witchcraft Library</div><div class="offer-desc">+1,250 books — spells, grimoires, Wicca, herbalism, moon rituals, divination, occult and more.</div></div><div class="offer-val"><span class="offer-val-strike">$97</span></div></div>
-      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 1 — Tarot Collection</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
-      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 2 — Astrology Library</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
-      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 3 — Kabbalah Collection</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
-      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 4 — Hermetic Library</div></div><div class="offer-val"><span class="offer-val-strike">$27</span><span class="offer-val-free">Free</span></div></div>
-      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Lifetime Access</div></div><div class="offer-val"><span style="font-size:11px;font-weight:600;color:#6EE7B7">Forever</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 1 — Tarot Collection</div></div><div class="offer-val"><span class="offer-val-strike">$27</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 2 — Astrology Library</div></div><div class="offer-val"><span class="offer-val-strike">$27</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 3 — Kabbalah Collection</div></div><div class="offer-val"><span class="offer-val-strike">$27</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Bonus 4 — Hermetic Library</div></div><div class="offer-val"><span class="offer-val-strike">$27</span></div></div>
+      <div class="offer-item"><div class="offer-icon" style="background:rgba(110,231,183,0.1);border:0.5px solid rgba(110,231,183,0.25);color:#6EE7B7;font-size:18px">✓</div><div class="offer-info"><div class="offer-name">Support + Lifetime Access</div></div><div class="offer-val"><span style="font-size:11px;font-weight:600;color:#6EE7B7">Included</span></div></div>
     </div>
     <div class="offer-total-row">
       <span class="offer-total-label" style="text-transform:uppercase;letter-spacing:.06em;font-weight:600">TOTAL VALUE</span>
@@ -1253,13 +1286,15 @@ footer {
       </div>
     </div>
     <div class="offer-cta-wrap">
-      <a href="https://pay.digitalgoat.com.br/checkout/cmpvs5xan0btm08potx6cko21?offer=RESZ2B6" class="btn-gold">Get Instant Access →</a>
+      <a href="https://pay.digitalgoat.com.br/checkout/cmpvs5xan0btm08potx6cko21?offer=RESZ2B6" class="btn-gold">🔥 CLAIM MY DISCOUNT NOW →</a>
     </div>
     <div class="trust-row">
       <div class="trust-item"><span class="trust-icon">🔒</span> Secure checkout</div>
-      <div class="trust-item"><span class="trust-icon">⬇</span> Instant delivery</div>
-      <div class="trust-item"><span class="trust-icon">🖨</span> Print unlimited</div>
+      <div class="trust-item"><span class="trust-icon">⬇</span> Instant access</div>
       <div class="trust-item"><span class="trust-icon">∞</span> Yours forever</div>
+    </div>
+    <div style="text-align:center;margin-bottom:24px">
+      <span style="font-size:13px;color:var(--text-sub)">🛡 <span style="color:var(--gold);font-weight:600">30-Day Money-Back Guarantee</span></span>
     </div>
     <div style="text-align:center;margin-bottom:24px">
       <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#6EE7B7;margin-bottom:14px">
@@ -1274,7 +1309,7 @@ footer {
     </div>
     <div class="decision-block">
       <div class="decision-title">You have a decision to make. And I think it's an easy one.</div>
-      <p class="decision-text">For less than a cup of coffee, you get <strong>+1,250 books of magic</strong>, 4 exclusive bonus collections, and a complete library to build your practice — yours to print and keep forever.<br><br>After your purchase, you'll have <strong>instant access</strong>. No waiting, no shipping. You can start exploring your grimoire in minutes.</p>
+      <p class="decision-text">For less than a cup of coffee, you get <strong>+1,250 witchcraft books</strong>, 4 exclusive bonus collections, and a complete library to build your practice — yours to print and keep forever.<br><br>After your purchase, you'll have <strong>instant access</strong>. No waiting, no shipping. You can start exploring your grimoire in minutes.</p>
     </div>
     <div class="guarantee">
       <div class="guarantee-icon">🛡</div>
