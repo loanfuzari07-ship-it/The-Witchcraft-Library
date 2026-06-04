@@ -253,7 +253,7 @@ h1, h2 { font-family: 'Cinzel', serif; line-height: 1.15; }
 
 .inside-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin-bottom: 40px;
 }
@@ -967,6 +967,8 @@ footer {
    RESPONSIVE
 ══════════════════════════════ */
 @media (max-width: 600px) {
+  .inside-grid { grid-template-columns: repeat(2, 1fr); }
+  .inside-grid .inside-card:last-child { grid-column: 1 / -1; }
   .hero-price-new { font-size: 64px !important; }
   .offer-price-big { font-size: 72px !important; }
 }
@@ -1077,7 +1079,6 @@ footer {
       <div class="inside-card"><div class="inside-icon-box">⭐</div><div class="inside-name">Occult & Esoteric</div><div class="inside-desc">Kabbalah, alchemy, sigils, numerology, sacred geometry and ceremonial magic.</div></div>
       <div class="inside-card"><div class="inside-icon-box">🪐</div><div class="inside-name">Moon & Astrology</div><div class="inside-desc">Lunar phases, moon rituals, planetary magic and astrological correspondences.</div></div>
       <div class="inside-card"><div class="inside-icon-box">🖤</div><div class="inside-name">Shadow Work</div><div class="inside-desc">Inner work prompts, self-discovery rituals and emotional alchemy practices.</div></div>
-      <div class="inside-card"><div class="inside-icon-box">🧙</div><div class="inside-name">Folk Magic & Witchcraft</div><div class="inside-desc">Kitchen witch, hedge witch, green witch and traditional folk spell traditions.</div></div>
       <div class="inside-card"><div class="inside-icon-box">💎</div><div class="inside-name">Crystals & Energy</div><div class="inside-desc">Crystal properties, grids, chakra work, energy cleansing and altar guides.</div></div>
     </div>
     <div class="inside-strip">
@@ -1115,7 +1116,7 @@ footer {
     <div class="divider"></div>
     <h2 class="section-headline" style="margin-bottom:8px">Turn Curiosity Into a<br><span class="gold">Real Witchcraft Practice</span></h2>
     <p style="font-size:15px;color:var(--text-sub);text-align:center;margin-bottom:3rem">With this library, you'll be able to:</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
 
       <div style="background:#080612;border:0.5px solid rgba(139,92,246,0.35);border-radius:20px;overflow:hidden;transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 0 28px rgba(124,58,237,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
         <div style="height:3px;background:linear-gradient(90deg,#7C3AED,#A78BFA)"></div>
